@@ -38,6 +38,12 @@ router.route("/:id").get((req, res) => {
         .then((post) => res.json(post))
         .catch((err) => res.status(400).json("Error: " + err));
 });
+router.route("/aman").get((req,res)=>{
+    res.json({
+        "name":"aman",
+        "mobile":"870787117"
+    })
+})
 
 // Route to edit a particular post
 router.route("/edit/:id").post((req, res) => {

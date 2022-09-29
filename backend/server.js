@@ -31,6 +31,11 @@ const authRouter = require("./routes/auth");
 app.use("/auth", authRouter);
 // To differentiate backend posts route, I am adding server/
 app.use("/server/posts", postsRouter);
+app.get('/', (req, res) => {
+    res.json({
+        "aman":"aman"
+    })
+  })
 
 //Load the npm build package of the frontend CRA
 if (process.env.NODE_ENV === "production") {
