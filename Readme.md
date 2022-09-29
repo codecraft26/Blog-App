@@ -1,10 +1,9 @@
-# Blog.it
+# Blog APP
 
   <img src=/frontend/public/android-chrome-192x192.png>
 
-A MERN stack blogging PWA(Progressive Web App), with user authentication and social login using Twitter and Google accounts.
+A MERN stack blogging PWA(Progressive Web App), with user authentication and social login using Twitter 🐦 and Google accounts.
 
-![GitHub](https://img.shields.io/github/license/Rajatm544/MERN-Blog-App?style=flat-square) ![Heroku](https://pyheroku-badge.herokuapp.com/?app=mern-blog-it&path=/&style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/Rajatm544/Mern-Blog-App?style=flat-square) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Getting Started
 
@@ -20,23 +19,18 @@ A MERN stack blogging PWA(Progressive Web App), with user authentication and soc
 
 You can obtain the MONGO_URI after create a collectoin on [mongodb atlas](https://www.mongodb.com/cloud/atlas). For the GOOGLE_CLIENT_ID and the TWITTER_CONSUMER_SECRET/ID, you will need to go through the Google developer console and the Twitter developer accounts page respectively
 
-## Demo
+## Technologies Jargon
 
-The app has been hosted on heroku [here](https://mern-blog-it.herokuapp.com/). P.S: You might have to wait for a few seconds for the heroku site to respond.
+Some of the technologies used in the development of this web application are as follow:
 
-<p align="center">
-
- <img alt="login page" src="https://i.ibb.co/bWBJLhB/Screenshot-834.png" width="534" height="300" />
- <img src="https://i.ibb.co/4sHTB83/Screenshot-835.png" alt="home page" width="534" height="300" />
- <img src="https://i.ibb.co/jg6rXpx/Screenshot-836.png" alt="rich editor" width="534" height="300" />
- <br/>
-  <img alt="mobile mockup" src="https://i.ibb.co/ZK3VRNF/mern-blog-it-herokuapp-com-Moto-G4-2.png" width="200" height="356"/> &emsp;
-  <img alt="mobile mockup 2" src="https://i.ibb.co/1TkMF7Q/mern-blog-it-herokuapp-com-Moto-G4-1.png" height="356" width="200" />
-  <br/>
-  <img alt="tablet mockup" src="https://i.ibb.co/bKqyx4w/mern-blog-it-herokuapp-com-i-Pad-1.png" width="300" height="402"/> &emsp;
-  <img alt="tablet mockup 2" src="https://i.ibb.co/vVNQ61w/mern-blog-it-herokuapp-com-i-Pad.png" width="300" height="402"/>
-  
-</p>
+-   [MongoDB Atlas](https://www.mongodb.com/cloud/atlas): It provides a free cloud service to store MongoDB collections.
+-   [React.js](https://reactjs.org/): A JavaScript library for building user interfaces.
+-   [Node.js](https://nodejs.org/en/): A runtime environment to help build fast server applications using JS.
+-   [Express.js](https://expressjs.com/): A popular Node.js framework to build scalable server-side for web applications.
+-   [Mongoose](https://mongoosejs.com/): An ODM(Object Data Modelling)library for MongoDB and Node.js
+-   [Heroku](http://heroku.com/): A platform(PaaS) to deploy full stack web applications for free.
+-   [JSON Web Tokens or JWTs](https://jwt.io/): A standard to securely authenticate HTTP requests
+-   [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/): A popular framework for building responsive, mobile-first sites.
 
 ## Info
 
@@ -54,6 +48,7 @@ The app has been hosted on heroku [here](https://mern-blog-it.herokuapp.com/). P
 ## Challenges faced
 
 There were a few challenges that came up during the development of the application. In this section, I aim to clarify my approach in overcoming these challeges, as a way to help you understand the code better, in case you decide to dive in!
+Most challeneging part setup passport authentication.
 
 ### Handling user authentication and user authorization
 
@@ -63,13 +58,10 @@ I initially intended on using the [authentication token strategy](http://www.pas
 
 Another important issue that I realized during the development process was that the blog input is basically an open ended user input that is being stored in the DB and is displayed to the user screens(for users who haven't registered, as well as registered users). This could lead to potential XSS attacks as any malicious code injection can also take place in the comment section/ blog post input. To avoid any such risks, it is important to sanitize the user input before POSTing it to the DB. The [sanitize-html-react](https://www.npmjs.com/package/sanitize-html-react) package is a handy subsidiary to the more widely used sanitize-html package, which removes any potential script tags from begin executed as part of the user input blog post/comment.
 
-### Rich Editor/Markdown Editor
+### Rich Editor/Markdown Editor(I Learned new thiing in this project)
 
 Although it may seem obvious that the editor used in a blogging platform needs to support multiple text editing options, it was a little challenging to find the appropriate solution to fit the needs of the current project. There were many WYSIWYG editors which provided sufficient documentation too, but in the end, the most optimal solution to the issue was to use the [CKeditor rich HTML editor](https://ckeditor.com/ckeditor-5/)'s React component implementation, with a custom toolbar configuration. The other options included [react-markdown-editor-lite](https://www.npmjs.com/package/react-markdown-editor-lite) and the [react-draft-wysiwyg](https://www.npmjs.com/package/react-draft-wysiwyg)
 
-### Responsive Design/PWA implementation
-
-The Bootstrap classes allowed for the design of the app to become a responsive onw, without many custom CSS media queries. The app design is minimal by design, and the emphasis is laid on the blog posts itself, rather than the design of the app's compnents. The app also has PWA support due to React's ability to activate service workers to cache the required data, as set by the developer. It is not an ideal type of app structure to facilitate the PWA design, but it can work to cache specific blog posts incase it was already accessed beforehand.
 
 ### Dealing with an anonymous comment section
 
@@ -84,19 +76,5 @@ The choice to make the comment section anonymous was a deliberate design choice,
 -   Integrations with popular blogging platforms like Medium or dev.to, to import already published articles.
 -   A system to 'like' or upvote potentially useful articles.
 
-Any more suggestions are always welcome in the PRs!
+Any more suggestions are always welcome in the PRs 😁!
 
-## Technologies Used
-
-Some of the technologies used in the development of this web application are as follow:
-
--   [MongoDB Atlas](https://www.mongodb.com/cloud/atlas): It provides a free cloud service to store MongoDB collections.
--   [React.js](https://reactjs.org/): A JavaScript library for building user interfaces.
--   [Node.js](https://nodejs.org/en/): A runtime environment to help build fast server applications using JS.
--   [Express.js](https://expressjs.com/): A popular Node.js framework to build scalable server-side for web applications.
--   [Mongoose](https://mongoosejs.com/): An ODM(Object Data Modelling)library for MongoDB and Node.js
--   [Heroku](http://heroku.com/): A platform(PaaS) to deploy full stack web applications for free.
--   [JSON Web Tokens or JWTs](https://jwt.io/): A standard to securely authenticate HTTP requests
--   [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/): A popular framework for building responsive, mobile-first sites.
-
-It can be noted that React can be swapped out in favor of any other popular frontend framework like Vue, Angular, Svelte or Ember. The server side can be implemented using Deno/Koa, flask/Django and similarly the data can also be modelled using the similar idea but with a SQL type DB like PS-SQL or MSSQL.
