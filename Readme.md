@@ -32,6 +32,12 @@ Some of the technologies used in the development of this web application are as 
 -   [JSON Web Tokens or JWTs](https://jwt.io/): A standard to securely authenticate HTTP requests
 -   [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/): A popular framework for building responsive, mobile-first sites.
 
+
+
+
+##  DEMO
+![alt text](./Assets/Blog.png)
+
 ## Info
 
 -   This is a blogging PWA with user authentication and authorization. There is also a social login option, to login using your Twitter or Google accounts. The blog posts are displayed in the reverse chronological order by default.
