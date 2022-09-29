@@ -36,7 +36,16 @@ Some of the technologies used in the development of this web application are as 
 
 
 ##  DEMO
+-Main Blog page
 ![alt text](./Assets/Blog.png)
+
+-Landing page
+![alt text](./Assets/Landing.png)
+
+-Login Page
+![alt text](./Assets/Login.png)
+ 
+
 
 ## Info
 
